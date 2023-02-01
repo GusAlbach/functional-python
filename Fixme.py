@@ -20,8 +20,15 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-
-
+    x = range(n + 1)
+    def helper(n):
+        if (n % 2) == 0:
+            return True
+        return False
+    answer = filter(helper, x)
+    answer = list(answer)
+    return answer
+        
 def threes(n):
     '''
     Returns a list of all numbers from 0 to n inclusive that contain the digit 3.
@@ -37,7 +44,16 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-
+    xs = range(n + 1)
+    def helper(n):
+        if n > 29 and n < 40:
+            return True
+        if int((n - 3)/10) == ((n - 3)/10):
+            return True
+        return False
+    x = filter(helper, xs)
+    answer = list(x)
+    return answer
 
 def small_words(text):
     '''
@@ -55,7 +71,14 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
+    newtext = text.split()
 
+    def helper(n):
+        if len(n) >= 5:
+            return False
+        return True
+    answer = filter(helper, newtext)
+    return list(answer)
 
 def squares(n):
     '''
@@ -71,7 +94,19 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-
+    listed = range(n + 1)
+    import math
+    def helper(n):
+        return n * n
+    def nozeroes(n):
+        if n == 0:
+            return False
+        return True
+    xs = map(helper, listed)
+    answer = list(xs)
+    xy = filter(nozeroes, answer)
+    newanswer = list(xy)
+    return newanswer
 
 def lengths(strings):
     '''
@@ -84,3 +119,8 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
+    def helper(n):
+        n = len(n)
+        return n
+    answer = map(helper, strings)
+    return list(answer)
