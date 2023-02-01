@@ -1,5 +1,6 @@
 # Functional Python [![](https://github.com/GusAlbach/functional-python/workflows/tests/badge.svg)](https://github.com/GusAlbach/functional-python/actions?query=workflow%3Atests)
 
+w
 ## Instructions
 
 1. Fork this repo
