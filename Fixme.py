@@ -5,6 +5,7 @@ Your solutions should use the map and filter functions,
 and not for loops or list comprehensions.
 '''
 
+
 def evens(n):
     '''
     Returns a list of even numbers from 0 to n inclusive.
@@ -21,6 +22,7 @@ def evens(n):
     []
     '''
     x = range(n + 1)
+
     def helper(n):
         if (n % 2) == 0:
             return True
@@ -28,10 +30,11 @@ def evens(n):
     answer = filter(helper, x)
     answer = list(answer)
     return answer
-        
+
+
 def threes(n):
     '''
-    Returns a list of all numbers from 0 to n inclusive that contain the digit 3.
+    Returns a list of all numbers from 0 to n inclusive that contain the
 
     >>> threes(2)
     []
@@ -45,6 +48,7 @@ def threes(n):
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
     xs = range(n + 1)
+
     def helper(n):
         if n > 29 and n < 40:
             return True
@@ -55,9 +59,10 @@ def threes(n):
     answer = list(x)
     return answer
 
+
 def small_words(text):
     '''
-    Returns a list of all words in the input text that are less than 5 characters long.
+    Returns a list of all words in the input text that are less than 5 charact
 
     HINT:
     Recall that text.split() converts the text variable into a list of words.
@@ -80,6 +85,7 @@ def small_words(text):
     answer = filter(helper, newtext)
     return list(answer)
 
+
 def squares(n):
     '''
     Returns a list of all square number between 1 and n inclusive.
@@ -95,9 +101,10 @@ def squares(n):
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
     listed = range(n + 1)
-    import math
+
     def helper(n):
         return n * n
+
     def nozeroes(n):
         if n == 0:
             return False
@@ -108,9 +115,10 @@ def squares(n):
     newanswer = list(xy)
     return newanswer
 
+
 def lengths(strings):
     '''
-    Given a list of strings, returns a list of the lengths of the corresponding strings.
+    Given a list of strings, returns a list of the lengths of the corresponding
 
     >>> lengths([])
     []
